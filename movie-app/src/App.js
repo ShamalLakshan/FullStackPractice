@@ -1,10 +1,10 @@
 import './App.css';
 
-const Person = () => {
+const Person = (props) => {
   return (
     <>
-      <h1>HEHEHEHEH</h1>
-      <h2>hahahah</h2>
+      <h1>Name : {props.name}</h1>
+      <h2>Year : {props.year}</h2>
     </>
   )
 }
@@ -15,7 +15,9 @@ const App = () => { // Arrow Function
     <div className="App">
       <>
         <h1>Hello {name}</h1>
-        <Person />
+        <Person name = {'RX7'} year = {'2005'}/>
+        <Person name = {'R34'} year = {'2003'}/>
+        <Person name = {'Corolla'} year = {'1998'}/>
       </>
     </div>
   );
