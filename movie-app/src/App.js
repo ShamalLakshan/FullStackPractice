@@ -50,6 +50,11 @@ const App = () => {
                     <div>
                         <img src={movie_1.Poster} />
                     </div>
+
+                    <div>
+                        <span>{movie_1.Type}</span>
+                        <h3>{movie_1.Title}</h3>
+                    </div>
                 </div>
             </div>
         </div>
