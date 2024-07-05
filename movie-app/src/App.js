@@ -1,4 +1,5 @@
 import './App.css';
+import {useState, useEffect} from 'react';
 
 //Component
 const Person = (props) => {
@@ -13,6 +14,10 @@ const Person = (props) => {
 const App = () => { // Arrow Function
   const name = 'John';
   const [counter, setCounter] = useState(0);
+
+  useEffect(() => {
+    counter = 100;
+  })
   return (
     <div className="App">
       <>
@@ -24,7 +29,7 @@ const App = () => { // Arrow Function
 
         <button onClick = {() => setCounter((prevCount) => prevCount - 1)}> - </button>
         <h2>{counter}</h2>
-        <button onClick = {() => setCounter()}> + </button>
+        <button onClick = {() => setCounter((prevCount) => prevCount + 1)}> + </button>
       </>
     </div>
   );
