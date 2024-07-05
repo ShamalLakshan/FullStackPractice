@@ -1,19 +1,19 @@
 import React from "react";
 
-const MovieCard = ({  movie_1  }) => {
+const MovieCard = ({  movie  }) => {
   return (
     <div className="movie">
       <div>
-        <p>{movie_1.Year}</p>
+        <p>{movie.Year}</p>
       </div>
 
       <div>
-        <img src={movie_1.Poster} />
+        <img src={movie.Poster} />
       </div>
 
       <div>
-        <span>{movie_1.Type}</span>
-        <h3>{movie_1.Title}</h3>
+        <span>{movie.Type}</span>
+        <h3>{movie.Title}</h3>
       </div>
     </div>
   );
