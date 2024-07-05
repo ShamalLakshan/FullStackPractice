@@ -1,20 +1,20 @@
-import "./App.css";
-import { useState, useEffect } from "react";
+import React from "react";
+import { useEffect } from "react";
 
-//Component
-const Person = (props) => {
-  return (
-    <>
-      <h1>Name : {props.name}</h1>
-      <h2>Year : {props.year}</h2>
-    </>
-  );
-};
+const API_URL = 'https://www.omdbapi.com?apikey=c032e2d7'
 
 const App = () => {
-    <div className="App">
-    </div>
-  );
-};
+    const searchMovies = async (title) => {
+        const response = await fetch(`${API_URL}&s=${title}`);
+        const data = await response.json();
 
+        console.log(data);
+    }
+    useEffect(() => {
+        searchMovies('Spiderman');
+    }, []);
+    return (
+        <h1>App</h1>
+    );
+)
 export default App;
