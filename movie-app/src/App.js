@@ -1,5 +1,6 @@
 import './App.css';
 
+//Component
 const Person = (props) => {
   return (
     <>
@@ -11,6 +12,7 @@ const Person = (props) => {
 
 const App = () => { // Arrow Function
   const name = 'John';
+  const [counter, setCounter] = useState(0);
   return (
     <div className="App">
       <>
@@ -18,6 +20,11 @@ const App = () => { // Arrow Function
         <Person name = {'RX7'} year = {'2005'}/>
         <Person name = {'R34'} year = {'2003'}/>
         <Person name = {'Corolla'} year = {'1998'}/>
+        
+
+        <button onClick = {() => setCounter((prevCount) => prevCount - 1)}> - </button>
+        <h2>{counter}</h2>
+        <button onClick = {() => setCounter()}> + </button>
       </>
     </div>
   );
