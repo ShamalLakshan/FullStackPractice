@@ -11,7 +11,7 @@ import java.util.Optional;
 @RequestMapping("/api/v1/movies")
 public class MovieController {
 
-    private final MovieService service;
+    private MovieService service;
 
     // Constructor injection
     public MovieController(MovieService service) {
